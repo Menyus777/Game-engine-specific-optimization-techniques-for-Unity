@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using System.Collections;
+using Unity.PerformanceTesting;
 using UnityEngine.TestTools;
 
 namespace Tests
@@ -7,10 +8,10 @@ namespace Tests
     public class PerformanceTestExample
     {
         // A Test behaves as an ordinary method
-        [Test]
+        [Test, Performance]
         public void PerformanceTestExampleSimplePasses()
         {
-            // Use the Assert class to test conditions
+            Measure.Method(() => { }).Run();
         }
 
         // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
