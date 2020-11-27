@@ -3,7 +3,8 @@
     "references": [
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
-        "Unity.PerformanceTesting"
+        "Unity.PerformanceTesting",
+        "PerformanceExampleTests"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

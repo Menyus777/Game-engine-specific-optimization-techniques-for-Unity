@@ -1,0 +1,312 @@
+fileFormatVersion: 2
+guid: 1443a3ed6b583ba4bb2a73fa4e69932d
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: MountainDragon_
+    100004: MountainDragon_ Head
+    100006: MountainDragon_ L Calf
+    100008: MountainDragon_ L Clavicle
+    100010: MountainDragon_ L Finger0
+    100012: MountainDragon_ L Finger01
+    100014: MountainDragon_ L Finger1
+    100016: MountainDragon_ L Finger11
+    100018: MountainDragon_ L Finger2
+    100020: MountainDragon_ L Finger21
+    100022: MountainDragon_ L Finger3
+    100024: MountainDragon_ L Finger31
+    100026: MountainDragon_ L Foot
+    100028: MountainDragon_ L Forearm
+    100030: MountainDragon_ L Hand
+    100032: MountainDragon_ L HorseLink
+    100034: MountainDragon_ L Thigh
+    100036: MountainDragon_ L Toe0
+    100038: MountainDragon_ L Toe01
+    100040: MountainDragon_ L Toe1
+    100042: MountainDragon_ L Toe11
+    100044: MountainDragon_ L Toe2
+    100046: MountainDragon_ L Toe21
+    100048: MountainDragon_ L Toe3
+    100050: MountainDragon_ L Toe31
+    100052: MountainDragon_ L UpperArm
+    100054: MountainDragon_ Neck
+    100056: MountainDragon_ Neck1
+    100058: MountainDragon_ Neck2
+    100060: MountainDragon_ Neck3
+    100062: MountainDragon_ Pelvis
+    100064: MountainDragon_ Ponytail1
+    100066: MountainDragon_ R Calf
+    100068: MountainDragon_ R Clavicle
+    100070: MountainDragon_ R Finger0
+    100072: MountainDragon_ R Finger01
+    100074: MountainDragon_ R Finger1
+    100076: MountainDragon_ R Finger11
+    100078: MountainDragon_ R Finger2
+    100080: MountainDragon_ R Finger21
+    100082: MountainDragon_ R Finger3
+    100084: MountainDragon_ R Finger31
+    100086: MountainDragon_ R Foot
+    100088: MountainDragon_ R Forearm
+    100090: MountainDragon_ R Hand
+    100092: MountainDragon_ R HorseLink
+    100094: MountainDragon_ R Thigh
+    100096: MountainDragon_ R Toe0
+    100098: MountainDragon_ R Toe01
+    100100: MountainDragon_ R Toe1
+    100102: MountainDragon_ R Toe11
+    100104: MountainDragon_ R Toe2
+    100106: MountainDragon_ R Toe21
+    100108: MountainDragon_ R Toe3
+    100110: MountainDragon_ R Toe31
+    100112: MountainDragon_ R UpperArm
+    100114: MountainDragon_ Spine
+    100116: MountainDragon_ Spine1
+    100118: MountainDragon_ Tail
+    100120: MountainDragon_ Tail1
+    100122: MountainDragon_ Tail10
+    100124: MountainDragon_ Tail2
+    100126: MountainDragon_ Tail3
+    100128: MountainDragon_ Tail4
+    100130: MountainDragon_ Tail5
+    100132: MountainDragon_ Tail6
+    100134: MountainDragon_ Tail7
+    100136: MountainDragon_ Tail8
+    100138: MountainDragon_ Tail9
+    100140: MountainDragon_WingL_Arm
+    100142: MountainDragon_WingL_FingerA_1
+    100144: MountainDragon_WingL_FingerA_2
+    100146: MountainDragon_WingL_FingerA_3
+    100148: MountainDragon_WingL_FingerB_1
+    100150: MountainDragon_WingL_FingerB_2
+    100152: MountainDragon_WingL_FingerB_3
+    100154: MountainDragon_WingL_FingerC_1
+    100156: MountainDragon_WingL_FingerC_2
+    100158: MountainDragon_WingL_FingerC_3
+    100160: MountainDragon_WingL_ForeArm
+    100162: MountainDragon_WingL_Hand
+    100164: MountainDragon_WingR_Arm
+    100166: MountainDragon_WingR_FingerA_1
+    100168: MountainDragon_WingR_FingerA_2
+    100170: MountainDragon_WingR_FingerA_3
+    100172: MountainDragon_WingR_FingerB_1
+    100174: MountainDragon_WingR_FingerB_2
+    100176: MountainDragon_WingR_FingerB_3
+    100178: MountainDragon_WingR_FingerC_1
+    100180: MountainDragon_WingR_FingerC_2
+    100182: MountainDragon_WingR_FingerC_3
+    100184: MountainDragon_WingR_ForeArm
+    100186: MountainDragon_WingR_Hand
+    100188: root
+    400000: //RootNode
+    400002: MountainDragon_
+    400004: MountainDragon_ Head
+    400006: MountainDragon_ L Calf
+    400008: MountainDragon_ L Clavicle
+    400010: MountainDragon_ L Finger0
+    400012: MountainDragon_ L Finger01
+    400014: MountainDragon_ L Finger1
+    400016: MountainDragon_ L Finger11
+    400018: MountainDragon_ L Finger2
+    400020: MountainDragon_ L Finger21
+    400022: MountainDragon_ L Finger3
+    400024: MountainDragon_ L Finger31
+    400026: MountainDragon_ L Foot
+    400028: MountainDragon_ L Forearm
+    400030: MountainDragon_ L Hand
+    400032: MountainDragon_ L HorseLink
+    400034: MountainDragon_ L Thigh
+    400036: MountainDragon_ L Toe0
+    400038: MountainDragon_ L Toe01
+    400040: MountainDragon_ L Toe1
+    400042: MountainDragon_ L Toe11
+    400044: MountainDragon_ L Toe2
+    400046: MountainDragon_ L Toe21
+    400048: MountainDragon_ L Toe3
+    400050: MountainDragon_ L Toe31
+    400052: MountainDragon_ L UpperArm
+    400054: MountainDragon_ Neck
+    400056: MountainDragon_ Neck1
+    400058: MountainDragon_ Neck2
+    400060: MountainDragon_ Neck3
+    400062: MountainDragon_ Pelvis
+    400064: MountainDragon_ Ponytail1
+    400066: MountainDragon_ R Calf
+    400068: MountainDragon_ R Clavicle
+    400070: MountainDragon_ R Finger0
+    400072: MountainDragon_ R Finger01
+    400074: MountainDragon_ R Finger1
+    400076: MountainDragon_ R Finger11
+    400078: MountainDragon_ R Finger2
+    400080: MountainDragon_ R Finger21
+    400082: MountainDragon_ R Finger3
+    400084: MountainDragon_ R Finger31
+    400086: MountainDragon_ R Foot
+    400088: MountainDragon_ R Forearm
+    400090: MountainDragon_ R Hand
+    400092: MountainDragon_ R HorseLink
+    400094: MountainDragon_ R Thigh
+    400096: MountainDragon_ R Toe0
+    400098: MountainDragon_ R Toe01
+    400100: MountainDragon_ R Toe1
+    400102: MountainDragon_ R Toe11
+    400104: MountainDragon_ R Toe2
+    400106: MountainDragon_ R Toe21
+    400108: MountainDragon_ R Toe3
+    400110: MountainDragon_ R Toe31
+    400112: MountainDragon_ R UpperArm
+    400114: MountainDragon_ Spine
+    400116: MountainDragon_ Spine1
+    400118: MountainDragon_ Tail
+    400120: MountainDragon_ Tail1
+    400122: MountainDragon_ Tail10
+    400124: MountainDragon_ Tail2
+    400126: MountainDragon_ Tail3
+    400128: MountainDragon_ Tail4
+    400130: MountainDragon_ Tail5
+    400132: MountainDragon_ Tail6
+    400134: MountainDragon_ Tail7
+    400136: MountainDragon_ Tail8
+    400138: MountainDragon_ Tail9
+    400140: MountainDragon_WingL_Arm
+    400142: MountainDragon_WingL_FingerA_1
+    400144: MountainDragon_WingL_FingerA_2
+    400146: MountainDragon_WingL_FingerA_3
+    400148: MountainDragon_WingL_FingerB_1
+    400150: MountainDragon_WingL_FingerB_2
+    400152: MountainDragon_WingL_FingerB_3
+    400154: MountainDragon_WingL_FingerC_1
+    400156: MountainDragon_WingL_FingerC_2
+    400158: MountainDragon_WingL_FingerC_3
+    400160: MountainDragon_WingL_ForeArm
+    400162: MountainDragon_WingL_Hand
+    400164: MountainDragon_WingR_Arm
+    400166: MountainDragon_WingR_FingerA_1
+    400168: MountainDragon_WingR_FingerA_2
+    400170: MountainDragon_WingR_FingerA_3
+    400172: MountainDragon_WingR_FingerB_1
+    400174: MountainDragon_WingR_FingerB_2
+    400176: MountainDragon_WingR_FingerB_3
+    400178: MountainDragon_WingR_FingerC_1
+    400180: MountainDragon_WingR_FingerC_2
+    400182: MountainDragon_WingR_FingerC_3
+    400184: MountainDragon_WingR_ForeArm
+    400186: MountainDragon_WingR_Hand
+    400188: root
+    7400000: Walk
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 0
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Walk
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 1
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: root
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: e0080c37f479acb49b6389201658bbf1,
+    type: 3}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
