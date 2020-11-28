@@ -3,7 +3,6 @@ using OptimizationExamples.PerformanceTestExamples;
 using System.Collections;
 using Unity.PerformanceTesting;
 using UnityEngine;
-using UnityEngine.Profiling;
 using UnityEngine.SceneManagement;
 using UnityEngine.TestTools;
 
@@ -24,7 +23,7 @@ namespace Tests
 
         FireBallSpawner _fireBallSpawner;
         [UnityTest, Performance]
-        public IEnumerator PerformanceTestExampleWithEnumeratorPasses()
+        public IEnumerator SpawnFireBalls_Min_60_FPS()
         {
             // Small warmup before measurement starts
             yield return new WaitForSeconds(2.0f);
@@ -32,19 +31,20 @@ namespace Tests
             var wait = new WaitForSeconds(0.15f);
            
             using (Measure.Frames().Scope())
+            using (ScopedFPSMeasurement.StartFPSMeasurement("FPS"))
             {
-                for (int i = 0; i < 300; i++)
+                for (int i = 0; i < 250; i++)
                 {
-                    _fireBallSpawner.SpawnFireBalls(25);
+                    _fireBallSpawner.SpawnFireBalls_intern_changes_improved(35);
                     yield return wait;
                 }
             }
 
             PerformanceTest info = PerformanceTest.Active;
             info.CalculateStatisticalValues();
-            //var fps = info.SampleGroups.Find(s => s.Name == "FPS");
+            var fps = info.SampleGroups.Find(s => s.Name == "FPS");
 
-            //Assert.GreaterOrEqual(fps.Min, 320f);
+            Assert.GreaterOrEqual(fps.Median, 60, "The median FPS should be higher than 60 frames per second");
 
         }
 
