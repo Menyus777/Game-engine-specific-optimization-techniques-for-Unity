@@ -20,7 +20,7 @@ namespace Tests.Performance.PerformanceTestExamples
         }
 
         [UnityTest, Performance]
-        public IEnumerator SpawnFireBalls_Min_60_FPS()
+        public IEnumerator SpawnFireBalls_RecommendedConfig_Min120FPS()
         {
             // Arrange
             var fireBallSpawner = GameObject.Find("Spawner").GetComponent<FireBallSpawner>();
@@ -45,7 +45,7 @@ namespace Tests.Performance.PerformanceTestExamples
             PerformanceTest.Active.CalculateStatisticalValues();
             var fpsResults = PerformanceTest.Active.SampleGroups.Find(s => s.Name == "FPS");
 
-            Assert.GreaterOrEqual(fpsResults.Median, 60, 
+            Assert.GreaterOrEqual(fpsResults.Median, 240,
                 "Violation of OG_117650: The median FPS should be higher than 60 frames per second.");
         }
 
