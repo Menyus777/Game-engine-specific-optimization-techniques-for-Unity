@@ -3,12 +3,16 @@ using UnityEngine;
 
 namespace OptimizationExamples.PerformanceTestExamples
 {
+	/// <summary>
+	/// Shoots fireballs on the specified spawn position
+	/// </summary>
 	public class FireBallSpawner : MonoBehaviour
 	{
 		[SerializeField]
 		Transform _spawnPos;
 
-		public GameObject _fireBallPrefab;
+		[SerializeField]
+		GameObject _fireBallPrefab;
 
 		void Update()
 		{
@@ -17,7 +21,7 @@ namespace OptimizationExamples.PerformanceTestExamples
 		}
 
 		/// <summary>
-		/// The first implemenation of spawn fire balls
+		/// The first implemenation of spawn fire balls method
 		/// </summary>
 		/// <param name="count"></param>
 		public void SpawnFireBalls_initial(int count)
@@ -34,19 +38,6 @@ namespace OptimizationExamples.PerformanceTestExamples
 		/// </summary>
 		/// <param name="count"></param>
 		public void SpawnFireBalls_intern_changes(int count)
-		{
-			for (int i = 0; i < count; i++)
-			{
-				Vector3 generatedPos = Random.onUnitSphere * 2.5f + _spawnPos.position;
-				Destroy(Instantiate(_fireBallPrefab, generatedPos, Quaternion.identity), 3.0f);
-			}
-		}
-
-		/// <summary>
-		/// The changes made by the intern collague
-		/// </summary>
-		/// <param name="count"></param>
-		public void SpawnFireBalls_intern_changes_improved(int count)
 		{
 			GameObject parent = new GameObject();
 			for (int i = 0; i < count; i++)
