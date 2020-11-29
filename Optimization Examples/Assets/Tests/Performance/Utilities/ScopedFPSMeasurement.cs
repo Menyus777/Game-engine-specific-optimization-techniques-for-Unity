@@ -4,10 +4,13 @@ using Unity.PerformanceTesting;
 using UnityEngine;
 
 /// <summary>
-/// An FPS Counter for inline yield instructions
+/// An scoped fps counter for yielding performance tests
 /// </summary>
 public class ScopedFPSMeasurement : IDisposable
 {
+    /// <summary>
+    /// Tells if the current scope is counting the fps or not
+    /// </summary>
     public bool IsCounting { get; private set; }
 
     static ScopedFPSMeasurement()
@@ -22,15 +25,20 @@ public class ScopedFPSMeasurement : IDisposable
     static InnerMonoBehaviour _innerMonoBehaviour;
     class InnerMonoBehaviour : MonoBehaviour { } 
 
+    /// <summary>
+    /// Starts a new scope for fps measurement
+    /// </summary>
+    /// <param name="measurementScope">The name of the scope</param>
+    /// <returns>The fps measurement scope</returns>
     public static ScopedFPSMeasurement StartFPSMeasurement(string measurementScope)
     {
         ScopedFPSMeasurement scopedFpsMeasurement = new ScopedFPSMeasurement();
         scopedFpsMeasurement.IsCounting = true;
-        _innerMonoBehaviour.StartCoroutine(FPSCounter());
+        _innerMonoBehaviour.StartCoroutine(FPSCounterCoroutine());
 
         return scopedFpsMeasurement;
 
-        IEnumerator FPSCounter()
+        IEnumerator FPSCounterCoroutine()
         {
             float t = 0f;
             int ellapsedFrames = 0;
@@ -50,11 +58,17 @@ public class ScopedFPSMeasurement : IDisposable
         }
     }
 
+    /// <summary>
+    /// Stops the fps measurement
+    /// </summary>
     public void StopFPSMeasurement()
     {
         IsCounting = false;
     }
 
+    /// <summary>
+    /// Closes the scope and stops the fps measurement
+    /// </summary>
     public void Dispose()
     {
         StopFPSMeasurement();
