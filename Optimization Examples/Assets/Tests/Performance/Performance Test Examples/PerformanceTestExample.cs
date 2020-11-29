@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.TestTools;
 
-namespace Tests
+namespace Tests.Performance.PerformanceTestExamples
 {
     public class PerformanceTestExample
     {
@@ -17,35 +17,36 @@ namespace Tests
             SceneManager.LoadScene("Performance Test Examples");
             // Wait a frame for scene load
             yield return null;
-
-            _fireBallSpawner = GameObject.Find("Spawner").GetComponent<FireBallSpawner>();
         }
 
-        FireBallSpawner _fireBallSpawner;
         [UnityTest, Performance]
         public IEnumerator SpawnFireBalls_Min_60_FPS()
         {
+            // Arrange
+            var fireBallSpawner = GameObject.Find("Spawner").GetComponent<FireBallSpawner>();
             // Small warmup before measurement starts
-            yield return new WaitForSeconds(2.0f);
+            yield return new WaitForSecondsRealtime(2.0f);
             // Simulating user input delay
-            var wait = new WaitForSeconds(0.15f);
+            var userInputDelayYieldInstruction = new WaitForSecondsRealtime(0.15f);
            
-            using (Measure.Frames().Scope())
+            // Act
+            using (Measure.Frames().Scope("Frame Time"))
             using (ScopedFPSMeasurement.StartFPSMeasurement("FPS"))
             {
                 for (int i = 0; i < 250; i++)
                 {
-                    _fireBallSpawner.SpawnFireBalls_intern_changes_improved(35);
-                    yield return wait;
+                    fireBallSpawner.SpawnFireBalls_intern_changes(25);
+                    yield return userInputDelayYieldInstruction;
                 }
             }
 
-            PerformanceTest info = PerformanceTest.Active;
-            info.CalculateStatisticalValues();
-            var fps = info.SampleGroups.Find(s => s.Name == "FPS");
+            // Assert
+            // Calculating the results for assertions
+            PerformanceTest.Active.CalculateStatisticalValues();
+            var fpsResults = PerformanceTest.Active.SampleGroups.Find(s => s.Name == "FPS");
 
-            Assert.GreaterOrEqual(fps.Median, 60, "The median FPS should be higher than 60 frames per second");
-
+            Assert.GreaterOrEqual(fpsResults.Median, 60, 
+                "Violation of OG_117650: The median FPS should be higher than 60 frames per second.");
         }
 
     }
