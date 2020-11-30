@@ -6,6 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Performance Test Examples/Performance Test Examples.unity
+    path: Assets/Scenes/Performance Test Examples/Performance Test Examples - Main
+      Menu.unity
+    guid: 014783c0fa13598459396c00f6914f3c
+  - enabled: 1
+    path: Assets/Scenes/Performance Test Examples/Performance Test Examples - Test
+      Level.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}
