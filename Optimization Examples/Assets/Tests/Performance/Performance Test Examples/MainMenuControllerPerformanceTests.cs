@@ -28,7 +28,8 @@ namespace Tests.Performance.PerformanceTestExamples
         static readonly (string levelButton, string sceneName)[] _levels = 
             new (string, string)[]
             {
-                ("Dragon Level - Button", "Performance Test Examples - Dragon Level")
+                ("Dragon Level - Button", "Performance Test Examples - Dragon Level"),
+                ("Empty Level - Button", "Performance Test Examples - Empty Level"),
             };
         [UnityTest, Performance]
         public IEnumerator LevelsLoadUnder2Seconds_RecommendedConfig(
