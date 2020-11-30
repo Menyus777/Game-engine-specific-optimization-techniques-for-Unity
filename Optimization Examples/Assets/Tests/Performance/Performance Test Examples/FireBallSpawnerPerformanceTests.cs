@@ -8,13 +8,13 @@ using UnityEngine.TestTools;
 
 namespace Tests.Performance.PerformanceTestExamples
 {
-    public class PerformanceTestExample
+    public class FireBallSpawnerPerformanceTests
     {
 
         [UnitySetUp]
         public IEnumerator BeforeAll()
         {
-            SceneManager.LoadScene("Performance Test Examples");
+            SceneManager.LoadScene("Performance Test Examples - Test Level");
             // Wait a frame for scene load
             yield return null;
         }
