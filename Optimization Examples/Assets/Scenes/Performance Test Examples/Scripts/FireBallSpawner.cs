@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 namespace OptimizationExamples.PerformanceTestExamples
@@ -13,6 +14,13 @@ namespace OptimizationExamples.PerformanceTestExamples
 
 		[SerializeField]
 		GameObject _fireBallPrefab;
+
+		void Awake()
+		{
+			// Simulated loading time for the first example in section 5.2
+			// E.g. Imagine that we are doing a blocking network call here thus the delay
+			Thread.Sleep(3000);
+		}
 
 		void Update()
 		{
