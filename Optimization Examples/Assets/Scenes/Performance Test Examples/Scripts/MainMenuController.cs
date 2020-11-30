@@ -1,7 +1,4 @@
-﻿// Copyright 2020 by RedFox Interactive - All Rights Reserved
-// Unauthorized copying of this file, is strictly prohibited
-
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -22,7 +19,7 @@ namespace OptimizationExamples.PerformanceTestExamples.UI
 		void Awake()
 		{
 			// Initializing the Load Dragon Button
-			_loadDragonLevelButton.onClick.AddListener(() => loadLevel("Performance Test Examples - Test Level"));
+			_loadDragonLevelButton.onClick.AddListener(() => loadLevel("Performance Test Examples - Dragon Level"));
 		}
 
 		/// <summary>
@@ -33,5 +30,6 @@ namespace OptimizationExamples.PerformanceTestExamples.UI
 		{
 			SceneManager.LoadScene(levelName, LoadSceneMode.Single);
 		}
+		
 	}
 }
