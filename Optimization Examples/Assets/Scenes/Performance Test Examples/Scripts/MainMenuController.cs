@@ -16,10 +16,17 @@ namespace OptimizationExamples.PerformanceTestExamples.UI
 		[SerializeField]
 		Button _loadDragonLevelButton;
 
+		/// <summary>
+		/// The button which loads an empty level that can be loaded fast
+		/// </summary>
+		public Button EmptyLevelButton { get => _emptyLevelButton; }
+		[SerializeField]
+		Button _emptyLevelButton;
+
 		void Awake()
 		{
-			// Initializing the Load Dragon Button
 			_loadDragonLevelButton.onClick.AddListener(() => loadLevel("Performance Test Examples - Dragon Level"));
+			_emptyLevelButton.onClick.AddListener(() => loadLevel("Performance Test Examples - Empty Level"));
 		}
 
 		/// <summary>
