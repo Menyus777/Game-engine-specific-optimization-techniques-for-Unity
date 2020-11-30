@@ -14,7 +14,7 @@ namespace Tests.Performance.PerformanceTestExamples
         [UnitySetUp]
         public IEnumerator BeforeAll()
         {
-            SceneManager.LoadScene("Performance Test Examples - Test Level");
+            SceneManager.LoadScene("Performance Test Examples - Dragon Level");
             // Wait a frame for scene load
             yield return null;
         }
