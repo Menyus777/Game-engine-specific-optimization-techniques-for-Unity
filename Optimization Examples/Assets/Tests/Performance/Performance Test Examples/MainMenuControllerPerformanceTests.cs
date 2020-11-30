@@ -37,17 +37,22 @@ namespace Tests.Performance.PerformanceTestExamples
             (string levelButton, string sceneName) level)
         {
             // Arrange
+            var loadTimeSampleGroup = new SampleGroup("Load Time", SampleUnit.Millisecond);
             var levelButton = GameObject.Find(level.levelButton).GetComponent<Button>();
             Stopwatch sw = new Stopwatch();
+            // Stopping the stopwatch when the scene gets loaded
             SceneManager.sceneLoaded += (scene, loadMode) => sw.Stop();
             // Small idling before measurement starts
             yield return new WaitForSecondsRealtime(2.0f);
 
             // Act
             sw.Start();
+            // Clicking on the appropriate scene button
             levelButton.onClick.Invoke();
 
+            // Waiting till the scene loads
             yield return new WaitUntil(() => !sw.IsRunning);
+            Measure.Custom(loadTimeSampleGroup, sw.ElapsedMilliseconds);
 
             // Assert
             Assert.Less(sw.ElapsedMilliseconds, 2000,
@@ -55,5 +60,6 @@ namespace Tests.Performance.PerformanceTestExamples
                 "Levels should load under 2 seconds on the reccommended configuration " +
                 $"but \"{level.sceneName}\" loaded under {sw.ElapsedMilliseconds} milliseconds");
         }
+
     }
 }
