@@ -13,4 +13,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Performance Test Examples/Performance Test Examples - Dragon
       Level.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Performance Test Examples/Performance Test Examples - Empty
+      Level.unity
+    guid: ee7d398295a3a4a438f37c55171647fe
   m_configObjects: {}
