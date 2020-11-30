@@ -1,5 +1,5 @@
-﻿#undef ADD_LOADING_TIME_DELAY
-
+﻿#define ADD_LOADING_TIME_DELAY
+//#undef ADD_LOADING_TIME_DELAY
 using UnityEngine;
 
 namespace OptimizationExamples.PerformanceTestExamples
@@ -17,8 +17,8 @@ namespace OptimizationExamples.PerformanceTestExamples
 		void Awake()
 		{
 			// Simulated loading time for the first example in section 5.2
-			// E.g. Imagine that we are doing a blocking network call here thus the delay
 #if ADD_LOADING_TIME_DELAY
+			// E.g. Imagine that we are doing a blocking network call here thus the delay
 			System.Threading.Thread.Sleep(3000);
 #endif
 		}
