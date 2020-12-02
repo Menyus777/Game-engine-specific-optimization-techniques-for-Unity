@@ -1002,8 +1002,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: To start the test scene click on the button below. Once the test scene
-    is loaded, just press the left mouse button to shoot fireballs on the dragon.
+  m_text: To start any of the test scenes click on the buttons below. Once the Dragon
+    Level is loaded, just press the left mouse button to shoot fireballs on the dragon.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1048,7 +1048,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 51
+  m_firstOverflowCharacterIndex: 53
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -1069,13 +1069,13 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -16.88916, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1423294292}
-    characterCount: 148
+    characterCount: 159
     spriteCount: 0
-    spaceCount: 27
-    wordCount: 28
+    spaceCount: 29
+    wordCount: 30
     linkCount: 0
     lineCount: 3
     pageCount: 1
