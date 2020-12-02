@@ -1,5 +1,5 @@
 ﻿#define ADD_LOADING_TIME_DELAY
-//#undef ADD_LOADING_TIME_DELAY
+#undef ADD_LOADING_TIME_DELAY
 using UnityEngine;
 
 namespace OptimizationExamples.PerformanceTestExamples
