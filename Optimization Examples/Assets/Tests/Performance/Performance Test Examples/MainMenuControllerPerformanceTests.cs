@@ -57,7 +57,7 @@ namespace Tests.Performance.PerformanceTestExamples
             // Assert
             Assert.Less(sw.ElapsedMilliseconds, 2000,
                 "Violation of OG_86650: " +
-                "Levels should load under 2 seconds on the reccommended configuration " +
+                "Levels should load under 2 seconds on the recommended configuration " +
                 $"but \"{level.sceneName}\" loaded under {sw.ElapsedMilliseconds} milliseconds");
         }
 
