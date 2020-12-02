@@ -10,9 +10,9 @@ using UnityEngine.UI;
 namespace Tests.Performance.PerformanceTestExamples
 {
     /// <summary>
-    /// Performance tests related to MainMenuController.cs
+    /// Performance tests related to level loading
     /// </summary>
-	public class MainMenuControllerPerformanceTests
+	public class LevelLoadingPerformanceTests
     {
         [UnitySetUp]
         public IEnumerator BeforeAll()

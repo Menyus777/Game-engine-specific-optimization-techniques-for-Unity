@@ -8,7 +8,7 @@ using UnityEngine.TestTools;
 
 namespace Tests.Performance.PerformanceTestExamples
 {
-    public class FireBallSpawnerPerformanceTests
+    public class DragonLevelPerformanceTests
     {
 
         [UnitySetUp]
