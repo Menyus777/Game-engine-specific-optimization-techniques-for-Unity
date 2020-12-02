@@ -40,13 +40,14 @@ public class ScopedFPSMeasurement : IDisposable
 
         IEnumerator FPSCounterCoroutine()
         {
+            var sampleGroup = new SampleGroup(measurementScope, SampleUnit.Undefined, true);
             float t = 0f;
             int ellapsedFrames = 0;
             while(scopedFpsMeasurement.IsCounting)
             {
                 if(t > 1f)
                 {
-                    Measure.Custom(measurementScope, ellapsedFrames);
+                    Measure.Custom(sampleGroup, ellapsedFrames);
                     ellapsedFrames = 0;
                     t = 0f;
                 }
