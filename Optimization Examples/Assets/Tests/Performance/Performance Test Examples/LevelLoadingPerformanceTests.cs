@@ -15,9 +15,11 @@ namespace Tests.Performance.PerformanceTestExamples
 	public class LevelLoadingPerformanceTests
     {
         [UnitySetUp]
-        public IEnumerator BeforeAll()
+        public IEnumerator BeforeEach()
         {
+            // Loading the relevant scene
             SceneManager.LoadScene("Performance Test Examples - Main Menu");
+
             // Wait a frame for scene load
             yield return null;
         }
@@ -33,11 +35,10 @@ namespace Tests.Performance.PerformanceTestExamples
             };
         [UnityTest, Performance]
         public IEnumerator LevelsLoadUnder2Seconds_RecommendedConfig(
-            [ValueSource("_levels")] 
-            (string levelButton, string sceneName) level)
+            [ValueSource("_levels")](string levelButton, string sceneName) level)
         {
             // Arrange
-            var loadTimeSampleGroup = new SampleGroup("Load Time", SampleUnit.Millisecond);
+            var sampleGroup = new SampleGroup("Load Time", SampleUnit.Millisecond);
             var levelButton = GameObject.Find(level.levelButton).GetComponent<Button>();
             Stopwatch sw = new Stopwatch();
             // Stopping the stopwatch when the scene gets loaded
@@ -52,13 +53,14 @@ namespace Tests.Performance.PerformanceTestExamples
 
             // Waiting till the scene loads
             yield return new WaitUntil(() => !sw.IsRunning);
-            Measure.Custom(loadTimeSampleGroup, sw.ElapsedMilliseconds);
+            Measure.Custom(sampleGroup, sw.ElapsedMilliseconds);
 
             // Assert
             Assert.Less(sw.ElapsedMilliseconds, 2000,
                 "Violation of OG_86650: " +
                 "Levels should load under 2 seconds on the recommended configuration " +
-                $"but \"{level.sceneName}\" loaded under {sw.ElapsedMilliseconds} milliseconds");
+                $"but \"{level.sceneName}\" loaded under {sw.ElapsedMilliseconds} " +
+                "milliseconds");
         }
 
     }
