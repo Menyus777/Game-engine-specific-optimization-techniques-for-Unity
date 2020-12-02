@@ -19,7 +19,7 @@ namespace OptimizationExamples.PerformanceTestExamples
 			// Simulated loading time for the first example in section 5.2
 #if ADD_LOADING_TIME_DELAY
 			// E.g. Imagine that we are doing a blocking network call here thus the delay
-			System.Threading.Thread.Sleep(3000);
+			System.Threading.Thread.Sleep(5000);
 #endif
 		}
 
