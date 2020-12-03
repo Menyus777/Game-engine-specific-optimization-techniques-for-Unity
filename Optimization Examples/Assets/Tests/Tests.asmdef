@@ -4,7 +4,8 @@
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
         "Unity.PerformanceTesting",
-        "PerformanceExampleTests"
+        "PerformanceExampleTests",
+        "UpdateManager"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
