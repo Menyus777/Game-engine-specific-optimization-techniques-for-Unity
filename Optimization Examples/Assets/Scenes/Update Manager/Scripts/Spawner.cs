@@ -2,20 +2,31 @@
 
 namespace OptimizationExamples.UpdateManager
 {
+	/// <summary>
+	/// Spawns the objects for UpdateManager scene
+	/// </summary>
 	public class Spawner : MonoBehaviour
 	{
+		/// <summary>
+		/// Use this flags to change updating logic from manual to Unity
+		/// </summary>
+		public static bool UseUpdateManager { get; set; } = false;
+
+		/// <summary>
+		/// The prefab type that this script spawns
+		/// </summary>
 		[SerializeField]
 		GameObject _objectToSpawn;
 
 		void Start()
 		{
-			SpawnObjects(100, true);
+			SpawnObjects(100);
 		}
 
 		/// <summary>
-		/// Will spawn count*count objects in the scene
+		/// Will spawn count * count - 1 objects in the scene
 		/// </summary>
-		public void SpawnObjects(int count, bool useUpdateManager = false)
+		public void SpawnObjects(int count)
 		{
 			for(int i = 0; i < count * 2; i = i + 2)
 			{
@@ -25,8 +36,8 @@ namespace OptimizationExamples.UpdateManager
 						continue;
 					var go = 
 						Instantiate(_objectToSpawn,new Vector3(i, 0f, j), Quaternion.identity, transform);
-					if (useUpdateManager)
-						UpdateManager.AddMover(go.AddComponent<ManagedMover>());
+					if (UseUpdateManager)
+						go.AddComponent<ManagedMover>();
 					else
 						go.AddComponent<Mover>();
 				}

@@ -2,6 +2,10 @@
 
 namespace OptimizationExamples.UpdateManager
 {
+	/// <summary>
+	/// Moves the <see cref="GameObject"/> that it is attached to
+	/// up and down with a random speed value
+	/// </summary>
 	public class Mover : MonoBehaviour
 	{
 

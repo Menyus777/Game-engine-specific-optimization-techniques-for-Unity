@@ -4,51 +4,55 @@ using UnityEngine;
 namespace OptimizationExamples.UpdateManager
 {
     /// <summary>
-    /// Updates the list of <see cref="Mover"/> types from the managed code
+    /// Updates the list of <see cref="ManagedMover"/> types manually
     /// </summary>
 	public class UpdateManager
 	{
 
-        static HashSet<ManagedMover> _updatables = new HashSet<ManagedMover>();
+        static HashSet<ManagedMover> _updateables = new HashSet<ManagedMover>();
 
         /// <summary>
-        /// Adds a <see cref="Mover"/> to the list of updatables
+        /// Adds a <see cref="Mover"/> to the list of updateables
         /// </summary>
         /// <param name="obj">The object that will be added</param>
-        public static void AddMover(ManagedMover mover)
+        public static void Add(ManagedMover mover)
         {
-            _updatables.Add(mover);
+            _updateables.Add(mover);
         }
 
         /// <summary>
-        /// Removes a <see cref="Mover"/> from the list of updatables
+        /// Removes a <see cref="Mover"/> from the list of updateables
         /// </summary>
         /// <param name="obj">The object that will be removed</param>
-        public static void RemoveMover(ManagedMover mover)
+        public static void Remove(ManagedMover mover)
         {
-            _updatables.Remove(mover);
+            _updateables.Remove(mover);
         }
 
-        static UpdateManager()
-        {
-            var gameObject = new GameObject();
-            _innerMonoBehaviour = gameObject.AddComponent<InnerMonoBehaviour>();
-#if UNITY_EDITOR
-        gameObject.hideFlags = HideFlags.HideInHierarchy | HideFlags.HideInInspector;
-        _innerMonoBehaviour.hideFlags = HideFlags.HideInHierarchy | HideFlags.HideInInspector;
-#endif
-        }
-        static InnerMonoBehaviour _innerMonoBehaviour;
-
-        class InnerMonoBehaviour : MonoBehaviour 
+        class UpdateManagerInnerMonoBehaviour : MonoBehaviour
         {
             void Update()
             {
-                foreach (var mover in _updatables)
+                foreach (var mover in _updateables)
                 {
                     mover.UpdateManager_Update();
                 }
             }
         }
+
+        #region Static constructor and field for inner MonoBehaviour
+
+        static UpdateManager()
+        {
+            var gameObject = new GameObject();
+            _innerMonoBehaviour = gameObject.AddComponent<UpdateManagerInnerMonoBehaviour>();
+#if UNITY_EDITOR
+        gameObject.hideFlags = HideFlags.HideInHierarchy | HideFlags.HideInInspector;
+        _innerMonoBehaviour.hideFlags = HideFlags.HideInHierarchy | HideFlags.HideInInspector;
+#endif
+        }
+        static UpdateManagerInnerMonoBehaviour _innerMonoBehaviour;
+
+        #endregion
     }
 }
