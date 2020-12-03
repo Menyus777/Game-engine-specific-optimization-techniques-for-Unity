@@ -38,6 +38,7 @@ namespace Tests.Performance.PerformanceTestExamples
             [ValueSource("_levels")](string levelButton, string sceneName) level)
         {
             // Arrange
+            // Creating a sample group for loading time
             var sampleGroup = new SampleGroup("Load Time", SampleUnit.Millisecond);
             var levelButton = GameObject.Find(level.levelButton).GetComponent<Button>();
             Stopwatch sw = new Stopwatch();
