@@ -11,7 +11,6 @@ namespace OptimizationExamples.UpdateManagerExample
     /// </summary>
 	public static class UpdateManager
 	{
-
         public static Stopwatch SW { get; private set; } = new Stopwatch();
         public static Action StopWatchStoppedCallback;
 
@@ -45,8 +44,7 @@ namespace OptimizationExamples.UpdateManagerExample
                     mover.UpdateManager_Update();
                 }
                 SW.Stop();
-                if(StopWatchStoppedCallback != null)
-                    StopWatchStoppedCallback.Invoke();
+                StopWatchStoppedCallback?.Invoke();
             }
         }
 
