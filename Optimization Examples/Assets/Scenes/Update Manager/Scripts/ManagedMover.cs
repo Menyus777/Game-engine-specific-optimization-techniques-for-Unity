@@ -2,7 +2,7 @@
 
 namespace OptimizationExamples.UpdateManager
 {
-	public class Mover : MonoBehaviour
+	public class ManagedMover : MonoBehaviour
 	{
 
 		float _speed;
@@ -12,7 +12,7 @@ namespace OptimizationExamples.UpdateManager
 			_speed = Random.Range(1.0f, 1.1f);
 		}
 
-		void Update()
+		public void UpdateManager_Update()
 		{
 			moveUpAndDown();
 		}

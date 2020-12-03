@@ -9,13 +9,13 @@ namespace OptimizationExamples.UpdateManager
 
 		void Start()
 		{
-			SpawnObjects(100);
+			SpawnObjects(100, true);
 		}
 
 		/// <summary>
 		/// Will spawn count*count objects in the scene
 		/// </summary>
-		public void SpawnObjects(int count)
+		public void SpawnObjects(int count, bool useUpdateManager = false)
 		{
 			for(int i = 0; i < count * 2; i = i + 2)
 			{
@@ -23,10 +23,14 @@ namespace OptimizationExamples.UpdateManager
 				{
 					if (i == 2 && j == 2)
 						continue;
-					Instantiate(_objectToSpawn, new Vector3(i, 0f, j), Quaternion.identity);
+					var go = 
+						Instantiate(_objectToSpawn,new Vector3(i, 0f, j), Quaternion.identity, transform);
+					if (useUpdateManager)
+						UpdateManager.AddMover(go.AddComponent<ManagedMover>());
+					else
+						go.AddComponent<Mover>();
 				}
 			}
 		}
-
 	}
 }

@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1784577749938196554}
   - component: {fileID: 2815471105115867210}
   - component: {fileID: 3419031157368746141}
-  - component: {fileID: 7009371709788335811}
   m_Layer: 0
   m_Name: Moving Cube
   m_TagString: Untagged
@@ -80,15 +79,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &7009371709788335811
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4983570371672049669}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23d3983e612b8ea4783c699d28dd7989, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
