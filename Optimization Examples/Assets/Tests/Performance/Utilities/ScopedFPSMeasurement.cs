@@ -17,7 +17,7 @@ public class ScopedFPSMeasurement : IDisposable
     {
         var gameObject = new GameObject();
         _innerMonoBehaviour = gameObject.AddComponent<InnerMonoBehaviour>();
-#if !UNITY_EDITOR
+#if UNITY_EDITOR
         gameObject.hideFlags = HideFlags.HideInHierarchy | HideFlags.HideInInspector;
         _innerMonoBehaviour.hideFlags = HideFlags.HideInHierarchy | HideFlags.HideInInspector;
 #endif
