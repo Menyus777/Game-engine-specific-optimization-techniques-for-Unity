@@ -11,6 +11,9 @@ namespace Tests.Performance.UpdateManagerExample
 	public class UpdateBenchmark
 	{
 
+        const float _warmupTime = 5f;
+        const float _executionTime = 60f;
+
         [UnityTest, Performance]
         public IEnumerator UpdateManager_Benchmark()
         {
@@ -24,12 +27,12 @@ namespace Tests.Performance.UpdateManagerExample
             yield return null;
 
             // Small idling before measurement starts
-            yield return new WaitForSecondsRealtime(5.0f);
+            yield return new WaitForSecondsRealtime(_warmupTime);
 
             UpdateManager.StopWatchStoppedCallback += () =>
                 Measure.Custom(sampleGroup, UpdateManager.SW.Elapsed.TotalMilliseconds);
 
-            yield return new WaitForSecondsRealtime(60.0f);
+            yield return new WaitForSecondsRealtime(_executionTime);
 
             UpdateManager.StopWatchStoppedCallback = null;
         }
@@ -46,15 +49,22 @@ namespace Tests.Performance.UpdateManagerExample
             // Wait a frame for scene load
             yield return null;
 
+            // Add the helper monos
+            var go = new GameObject("Temp mono holder");
+            go.AddComponent<UpdateBenchmarkHelperJustBefore>();
+            go.AddComponent<UpdateBenchmarkHelperJustAfter>();
+
             // Small idling before measurement starts
-            yield return new WaitForSecondsRealtime(5.0f);
+            yield return new WaitForSecondsRealtime(_warmupTime);
 
-            UpdateManager.StopWatchStoppedCallback += () =>
-                Measure.Custom(sampleGroup, UpdateManager.SW.Elapsed.TotalMilliseconds);
+            UpdateBenchmarkHelperJustAfter.StopWatchStoppedCallback += () =>
+                Measure.Custom(
+                    sampleGroup,
+                    UpdateBenchmarkHelperJustAfter.SW.Elapsed.TotalMilliseconds);
 
-            yield return new WaitForSecondsRealtime(60.0f);
+            yield return new WaitForSecondsRealtime(_executionTime);
 
-            UpdateManager.StopWatchStoppedCallback = null;
+            UpdateBenchmarkHelperJustAfter.StopWatchStoppedCallback = null;
         }
 
     }
