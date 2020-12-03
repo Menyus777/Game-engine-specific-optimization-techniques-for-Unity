@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace OptimizationExamples.UpdateManager
+namespace OptimizationExamples.UpdateManagerExample
 {
 	/// <summary>
 	/// Spawns the objects for UpdateManager scene

@@ -1,13 +1,19 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
+using Debug = UnityEngine.Debug;
 
-namespace OptimizationExamples.UpdateManager
+namespace OptimizationExamples.UpdateManagerExample
 {
     /// <summary>
     /// Updates the list of <see cref="ManagedMover"/> types manually
     /// </summary>
-	public class UpdateManager
+	public static class UpdateManager
 	{
+
+        public static Stopwatch SW { get; private set; } = new Stopwatch();
+        public static Action StopWatchStoppedCallback;
 
         static HashSet<ManagedMover> _updateables = new HashSet<ManagedMover>();
 
@@ -33,10 +39,14 @@ namespace OptimizationExamples.UpdateManager
         {
             void Update()
             {
+                SW.Restart();
                 foreach (var mover in _updateables)
                 {
                     mover.UpdateManager_Update();
                 }
+                SW.Stop();
+                if(StopWatchStoppedCallback != null)
+                    StopWatchStoppedCallback.Invoke();
             }
         }
 

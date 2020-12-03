@@ -1,12 +1,12 @@
 ﻿using NUnit.Framework;
-using OptimizationExamples.UpdateManager;
+using OptimizationExamples.UpdateManagerExample;
 using System.Collections;
 using Unity.PerformanceTesting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.TestTools;
 
-namespace Tests.Performance.UpdateManager
+namespace Tests.Performance.UpdateManagerExample
 {
 	public class UpdateBenchmark
 	{
@@ -14,21 +14,24 @@ namespace Tests.Performance.UpdateManager
         [UnityTest, Performance]
         public IEnumerator UpdateManager_Benchmark()
         {
-            SceneManager.LoadScene("Update Manager");
             Spawner.UseUpdateManager = true;
+            SceneManager.LoadScene("Update Manager");
 
-            var sampleGroup = new SampleGroup("Load Time", SampleUnit.Millisecond);
-
-            // Wait a frame for scene load
-            yield return null;
-
-            
+            var sampleGroup = 
+                new SampleGroup("Update Time", SampleUnit.Millisecond);
 
             // Wait a frame for scene load
             yield return null;
 
             // Small idling before measurement starts
-            yield return new WaitForSecondsRealtime(2.0f);         
+            yield return new WaitForSecondsRealtime(5.0f);
+
+            UpdateManager.StopWatchStoppedCallback += () =>
+                Measure.Custom(sampleGroup, UpdateManager.SW.Elapsed.TotalMilliseconds);
+
+            yield return new WaitForSecondsRealtime(60.0f);
+
+            UpdateManager.StopWatchStoppedCallback = null;
         }
 
     }

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace OptimizationExamples.UpdateManager
+namespace OptimizationExamples.UpdateManagerExample
 {
 	/// <summary>
 	/// Moves the <see cref="GameObject"/> that it is attached to
