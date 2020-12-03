@@ -17,4 +17,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Performance Test Examples/Performance Test Examples - Empty
       Level.unity
     guid: ee7d398295a3a4a438f37c55171647fe
+  - enabled: 1
+    path: Assets/Scenes/Update Manager/Update Manager.unity
+    guid: 3d59f0edd58497a46842fd4dcaff5985
   m_configObjects: {}
