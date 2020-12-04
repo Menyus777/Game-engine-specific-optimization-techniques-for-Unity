@@ -85,13 +85,13 @@ Material:
     - _FoamIntensity: 2.95
     - _FoamLinesSpeed: 0.1
     - _FoamSpeed: 0.09
-    - _FoamTextureSpeedX: 0.025
-    - _FoamTextureSpeedY: 0.025
+    - _FoamTextureSpeedX: 0.0125
+    - _FoamTextureSpeedY: 0.0125
     - _FoamThreshold: 5.91
     - _FogThreshold: 24.32
     - _FresnelPower: 0.29
     - _GlossMapScale: 1
-    - _Glossiness: 0.699
+    - _Glossiness: 1
     - _GlossyReflections: 1
     - _IntersectionThreshold: 6.88
     - _Metallic: 0
@@ -112,4 +112,4 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FogColor: {r: 0.049172327, g: 0.66215104, b: 0.8018868, a: 1}
     - _IntersectionColor: {r: 0, g: 1, b: 0.59222054, a: 0}
-    - _NormalPanningSpeeds: {r: 0, g: 0, b: 0.025, a: 0.025}
+    - _NormalPanningSpeeds: {r: 0, g: 0, b: 0.0125, a: 0.0125}
