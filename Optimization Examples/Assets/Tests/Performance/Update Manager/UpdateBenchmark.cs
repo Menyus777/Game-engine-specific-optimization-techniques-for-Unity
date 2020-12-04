@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
 using OptimizationExamples.UpdateManagerExample;
 using System.Collections;
+using Tests.Performance.Utilities;
 using Unity.PerformanceTesting;
 using UnityEngine;
 using UnityEngine.SceneManagement;

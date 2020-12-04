@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Tests.Performance.UpdateManagerExample
+namespace Tests.Performance.Utilities
 {
 	public class UpdateBenchmarkHelperJustBefore : MonoBehaviour
 	{
