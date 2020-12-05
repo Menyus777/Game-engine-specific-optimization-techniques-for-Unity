@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Update Manager/Update Manager.unity
     guid: 3d59f0edd58497a46842fd4dcaff5985
+  - enabled: 1
+    path: Assets/Scenes/Importance of Hashing/Importance of Hashing.unity
+    guid: 91de0f332fbccf549a067395757deb82
   m_configObjects: {}
