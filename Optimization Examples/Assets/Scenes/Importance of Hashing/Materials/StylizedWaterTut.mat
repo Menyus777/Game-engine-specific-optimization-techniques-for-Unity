@@ -82,12 +82,12 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _Emission: 0
-    - _FoamIntensity: 2.95
-    - _FoamLinesSpeed: 0.1
+    - _FoamIntensity: 4
+    - _FoamLinesSpeed: 0.12
     - _FoamSpeed: 0.09
-    - _FoamTextureSpeedX: 0.0125
-    - _FoamTextureSpeedY: 0.0125
-    - _FoamThreshold: 5.91
+    - _FoamTextureSpeedX: 0.05
+    - _FoamTextureSpeedY: 0.015
+    - _FoamThreshold: 1.23
     - _FogThreshold: 24.32
     - _FresnelPower: 0.29
     - _GlossMapScale: 1
@@ -96,7 +96,7 @@ Material:
     - _IntersectionThreshold: 6.88
     - _Metallic: 0
     - _Mode: 0
-    - _NormalStrength: 0.1
+    - _NormalStrength: 0.3
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _RefractionAmount: 3.45
