@@ -18,6 +18,7 @@ namespace Tests.Performance.Utilities
         static ScopedFPSMeasurement()
         {
             var gameObject = new GameObject();
+            GameObject.DontDestroyOnLoad(gameObject);
             _innerMonoBehaviour = gameObject.AddComponent<InnerMonoBehaviour>();
 #if UNITY_EDITOR
             gameObject.hideFlags = HideFlags.HideInHierarchy | HideFlags.HideInInspector;
