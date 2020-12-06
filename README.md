@@ -3,6 +3,7 @@
 <br>
 <br>
 How to run the performance tests:
+
 - Open the project inside Unity
 - Go to Window > General test Runner
 - Select Play Mode
