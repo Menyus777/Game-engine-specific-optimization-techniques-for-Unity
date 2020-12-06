@@ -6,7 +6,8 @@
         "Unity.PerformanceTesting",
         "PerformanceExampleTests",
         "UpdateManager",
-        "ImportanceOfHashing"
+        "ImportanceOfHashing",
+        "HierarchyOptimization"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
