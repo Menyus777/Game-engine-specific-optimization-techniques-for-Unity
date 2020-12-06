@@ -5,6 +5,6 @@
 How to run the performance tests:
 
 - Open the project inside Unity
-- Go to Window > General test Runner
+- Go to Window > General > Test Runner
 - Select Play Mode
 - Click on the button in upper right corner  (Run all in player)
