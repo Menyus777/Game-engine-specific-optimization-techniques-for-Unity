@@ -11,12 +11,12 @@ In this thesis we will learn how and when in the development process we should d
 
 Update manager optimization technique is a special technique which avoids unnecesary interop update calls by using a managed only UpdateManager class.
 
-Traditional
+**Traditional**
 <img src="Thesis/Images/Traditional.gif">
-Update Manager
+**Update Manager**
 <img src="Thesis/Images/Manager.gif">
 
-Benchmarks of the Traditional and Update Manager solution with 10 000 cubes moving up and down
+**Benchmarks of the Traditional and Update Manager solution with 10 000 cubes moving up and down**
 ![Traditional vs Update Manager Benchmarks](Thesis/Images/UpdateManager%20vs%20Traditional%20Interop%20Call%20Benchmark.png?raw=true "Traditional vs Update Manager Benchmarks")
 
 If you are intrested in more bechnmarks and techniques for handling optimization degradations read my thesis :)
