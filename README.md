@@ -16,7 +16,7 @@ Traditional
 Update Manager
 <img src="Thesis/Images/Manager.gif">
 
-Benchmarks of the Traditional and Update Manager solution
+Benchmarks of the Traditional and Update Manager solution with 10 000 cubes moving up and down
 ![Traditional vs Update Manager Benchmarks](Thesis/Images/UpdateManager%20vs%20Traditional%20Interop%20Call%20Benchmark.png?raw=true "Traditional vs Update Manager Benchmarks")
 
 If you are intrested in more bechnmarks and techniques for handling optimization degradations read my thesis :)
