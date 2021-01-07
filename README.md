@@ -9,8 +9,8 @@ In this thesis we will learn how and when in the development process we should d
 
 ### Update Manager vs Traditional Update Methods
 
-![Traditional](Thesis/Images/Traditional.gif?raw=true "Traditional")
-![Update Manager](Thesis/Images/Manager.gif?raw=true "Update Manager")
+![Traditional](Thesis/Images/Traditional.gif =250x)
+![Update Manager](Thesis/Images/Manager.gif =150x)
 
 ![Traditional vs Update Manager Benchmarks](Thesis/Images/UpdateManager%20vs%20Traditional%20Interop%20Call%20Benchmark.png?raw=true "Traditional vs Update Manager Benchmarks")
 
