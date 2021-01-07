@@ -9,10 +9,17 @@ In this thesis we will learn how and when in the development process we should d
 
 ### Update Manager vs Traditional Update Methods
 
-![Traditional](Thesis/Images/Traditional.gif =250x)
-![Update Manager](Thesis/Images/Manager.gif =150x)
+Update manager optimization technique is a special technique which avoids unnecesary interop update calls by using a managed only UpdateManager class.
 
+Traditional
+<img src="Thesis/Images/Traditional.gif">
+Update Manager
+<img src="Thesis/Images/Manager.gif">
+
+Benchmarks of the Traditional and Update Manager solution
 ![Traditional vs Update Manager Benchmarks](Thesis/Images/UpdateManager%20vs%20Traditional%20Interop%20Call%20Benchmark.png?raw=true "Traditional vs Update Manager Benchmarks")
+
+If you are intrested in more bechnmarks and techniques for handling optimization degradations read my thesis :)
 
 ## How to run the performance tests on your machine
 
